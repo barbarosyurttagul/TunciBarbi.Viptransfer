@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concretes\" />
     <Folder Include="Abstract\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TunciBarbi.Entities\VipTransfer.Entities.csproj" />
   </ItemGroup>
 
 </Project>

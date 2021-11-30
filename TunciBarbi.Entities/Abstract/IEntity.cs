@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VipTransfer.Entities.Concretes
+namespace VipTransfer.Entities.Abstract
 {
-    public class Departure : Location
+    //Markalama Interface'i
+    public interface IEntity
     {
-        
     }
 }
