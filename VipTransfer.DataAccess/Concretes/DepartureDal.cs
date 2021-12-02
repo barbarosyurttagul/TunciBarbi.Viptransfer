@@ -14,9 +14,9 @@ namespace VipTransfer.DataAccess.Concretes
 
         public DepartureDal()
         {
-            departures.Add(new Departure { Id=1, Name="Kaş"});
-            departures.Add(new Departure { Id = 1, Name = "Alanya" });
-            departures.Add(new Departure { Id = 1, Name = "Kalkab" });
+            departures.Add(new Departure { Id = 1, Name = "Kaş"});
+            departures.Add(new Departure { Id = 2, Name = "Alanya" });
+            departures.Add(new Departure { Id = 3, Name = "Kalkab" });
 
         }
 
@@ -50,7 +50,7 @@ namespace VipTransfer.DataAccess.Concretes
         }
     }
 
-    depart
+    
 
 
 }
