@@ -7,7 +7,7 @@ using VipTransfer.Entities.Concretes;
 
 namespace VipTransfer.DataAccess.Concretes
 {
-    public class DepartureDal 
+    public class DepartureDal
     {
         List<Departure> departures = new List<Departure>();
        
@@ -46,6 +46,7 @@ namespace VipTransfer.DataAccess.Concretes
         public string GetById(int id)
         {
             var departureById = departures.Where(x => x.Id == id).FirstOrDefault();
+            
             return departureById.Name;
         }
     }
