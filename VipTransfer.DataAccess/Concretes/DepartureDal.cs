@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VipTransfer.DataAccess.Abstract;
 using VipTransfer.Entities.Concretes;
 
 namespace VipTransfer.DataAccess.Concretes
 {
-    public class DepartureDal
+    public class DepartureDal : IDepartureDal
     {
         List<Departure> departures = new List<Departure>();
        
@@ -48,6 +49,20 @@ namespace VipTransfer.DataAccess.Concretes
             var departureById = departures.Where(x => x.Id == id).FirstOrDefault();
             
             return departureById.Name;
+        }
+
+       public Departure GetByName(string name)
+        {
+            var departureByName = departures.Where(x => x.Name == name).FirstOrDefault();
+            if (departureByName != null)
+               return departureByName;
+
+            var defaultDepartureByName=departures.Take<Departure>(1).FirstOrDefault();
+
+            Console.WriteLine("Aradığınız lokasyon bulunamadı. En yakın lokasyon: ");
+#pragma warning disable CS8603 // Olası null başvuru dönüşü.
+            return defaultDepartureByName;
+#pragma warning restore CS8603 // Olası null başvuru dönüşü.
         }
     }
 
