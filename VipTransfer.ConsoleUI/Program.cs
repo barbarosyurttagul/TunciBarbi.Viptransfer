@@ -20,7 +20,7 @@ foreach (var item in arrivalList)
     Console.WriteLine($"Idsi: {item.Id} Adı: {item.Name}");
 }
 
-//arrivalDal.Sil(arrival);
+
 
 /*
 Console.WriteLine("Silindikten sonraki veritabanı aşağıdaki gibidir");
